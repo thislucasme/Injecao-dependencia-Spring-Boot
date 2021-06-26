@@ -8,7 +8,7 @@ import com.thislucasme.services.AtivacaoClienteService;
 @Configuration
 public class ServiceConfig {
 	
-	@Bean(initMethod = "init", destroyMethod = "destroy")
+	@Bean
 	public AtivacaoClienteService ativacaoClienteService() {
 		return new AtivacaoClienteService();
 	}
