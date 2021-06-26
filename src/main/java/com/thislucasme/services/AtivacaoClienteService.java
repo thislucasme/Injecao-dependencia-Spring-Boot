@@ -11,18 +11,18 @@ import com.thislucasme.notificacao.NivelUrgencia;
 import com.thislucasme.notificacao.Notificador;
 import com.thislucasme.notificacao.TipoDoNotificador;
 
-@Component
+//@Component
 public class AtivacaoClienteService {
 	
 	@TipoDoNotificador(NivelUrgencia.NORMAL)
 	@Autowired
 	private Notificador notificador;
 	
-	@PostConstruct
+//	@PostConstruct
 	public void init() {
 		System.out.println("INIT");
 	}
-	@PreDestroy 
+//	@PreDestroy 
 	public void destroy() {
 		System.out.println("DESTROY");
 	}
