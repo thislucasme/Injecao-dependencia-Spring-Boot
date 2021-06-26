@@ -1,13 +1,10 @@
 package com.thislucasme.notificacao;
 
-
-
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.thislucasme.model.Cliente;
 
-@Qualifier("urgente")
+@TipoDoNotificador(value = NivelUrgencia.NORMAL)
 @Component
 public class NotificadorSMS implements Notificador{
 	

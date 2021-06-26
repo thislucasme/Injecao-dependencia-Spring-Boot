@@ -2,15 +2,16 @@ package com.thislucasme.services;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import com.thislucasme.notificacao.NivelUrgencia;
 import com.thislucasme.notificacao.Notificador;
+import com.thislucasme.notificacao.TipoDoNotificador;
 
 @Component
 public class AtivacaoClienteService {
 	
-	@Qualifier("urgente")
+	@TipoDoNotificador(NivelUrgencia.NORMAL)
 	@Autowired
 	private Notificador notificador;
 	
