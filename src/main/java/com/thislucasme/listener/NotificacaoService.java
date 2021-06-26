@@ -12,7 +12,7 @@ import com.thislucasme.services.ClienteAtivadoEvent;
 @Component
 public class NotificacaoService {
 	
-	@TipoDoNotificador(NivelUrgencia.NORMAL)
+	@TipoDoNotificador(NivelUrgencia.SEM_URGENCIA)
 	@Autowired
 	private Notificador notificador;
 	
