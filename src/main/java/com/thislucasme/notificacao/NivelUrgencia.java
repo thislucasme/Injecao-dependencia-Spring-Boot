@@ -3,6 +3,7 @@ package com.thislucasme.notificacao;
 public enum NivelUrgencia {
 	
 	URGENTE,
-	NORMAL
+	NORMAL,
+	SEM_URGENCIA
 
 }

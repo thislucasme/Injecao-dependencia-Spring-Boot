@@ -4,19 +4,18 @@ import org.springframework.stereotype.Component;
 
 import com.thislucasme.model.Cliente;
 
-@Profile("prod")
+@Profile("dev")
 @TipoDoNotificador(value = NivelUrgencia.SEM_URGENCIA)
 @Component
-public class NotificadorEmail implements Notificador{
+public class NotificadorEmailMock implements Notificador{
 	
-	public NotificadorEmail() {
-		System.out.println("Notificador email: REAL");
+	public NotificadorEmailMock() {
+		System.out.println("Notificador email: MOCK");
 	}
-	
 	@Override
 	public void notificar(Cliente cliente, String mensagem) {
 		
-		System.out.printf("Notificando %s : usando SMTP %s\n", cliente.nome, mensagem);
+		System.out.printf("Mock: Notificaçao seria enviado %s : através do EMAIL %s\n", cliente.nome, mensagem);
 	}
 	
 	
